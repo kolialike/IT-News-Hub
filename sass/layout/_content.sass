@@ -1,0 +1,134 @@
+.gallery
+	margin-left: -30 / 1280 * 100%
+	font-size: 0px
+	line-height: 0
+	padding-top: 10px
+	padding-bottom: 38px
+	+breakpoint($break-1023)
+		margin-left: -53 / 768 * 100%
+		padding-top: 15px
+	+breakpoint($break-480)
+		margin-left: 0
+
+.gallery-item
+	display: inline-block
+	vertical-align: top
+	text-align: center
+	+box-sizing(border-box)
+	width: 226 / 1280 * 100%
+	margin-left: 30 / 1280 *100%
+	margin-top: 30 / 1280 *100%
+	+breakpoint($break-1023)
+		width: 203 / 768 * 100%
+		margin-left: 53 / 768 *100%
+		margin-top: 35 / 768 *100%
+	+breakpoint($break-480)
+		display: block
+		width: 260px
+		margin: 25px auto 0px
+	img 
+		+breakpoint($break-480)
+			width: 92%
+		
+.gallery-item-content
+	+transition(0.5s)
+	&:hover
+		+opacity(0.6)
+		span 
+			color: #1e476c
+			
+	a 
+		+box-sizing(border-box)
+		img 
+			width: 100%
+	span
+		display: block 
+		color: #72a8d8
+		font-size: 20px
+		line-height: 24px
+		padding: 10px 15px 0px 15px
+		+transition(0.5s)
+		+breakpoint($break-1023)
+			line-height: 23px
+			padding: 26px 5px 0px
+		+breakpoint($break-655)
+			font-size: 16px
+		+breakpoint($break-480)
+			font-size: 20px
+			padding: 17px 1px 9px
+			letter-spacing: -0.8px
+.gallery-popup
+	position: fixed
+	top: 50%
+	right: 50%
+	bottom: 50%
+	left: 50%
+	overflow: auto
+	padding-top: 60px
+	text-align: center
+	background: rgba(#6497cf,0.5)
+	+box-sizing(border-box)
+	z-index: 100
+	padding-bottom: 60px
+	+opacity(0)
+	+transition(0.2s)
+	+breakpoint($break-767)
+		padding-top: 40px
+	.gallery-popup-open &
+		+opacity(1)
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+	.gallery-popup-content
+		display: inline-block
+		width: 567px
+		background: #fff
+		+breakpoint($break-767)
+			max-width: 100%
+	h3 
+		font-size: 24px
+		display: block
+		padding: 19px 00px 4px
+		text-align: left
+		line-height: 30px
+	img 
+		float: left 
+		margin: 16px 20px 0px 0px
+		max-width: 49.5%
+		width: 49.5%
+		+breakpoint($break-480)
+			float: none
+			max-width: 100%
+			width: 100%
+			margin: 16px 20px 20px 0px
+	p 
+		font-size: 16px
+		line-height: 22px
+		padding: 15px 00px 0px
+		letter-spacing: 0px
+		text-align: left
+	span 
+		font-size: 16px
+		line-height: 22px
+		padding-top: 20px
+	footer
+		padding: 7px 20px 20px
+	header
+		background: #5484bc
+		display: block
+		padding: 30px 0px
+		position: relative
+	article
+		padding: 0px 20px
+	.icon-close
+		position: absolute
+		z-index: 200
+		top: 0px
+		right: 0px
+		&:before
+			display: block
+			color: #fff
+			font-size: 20px
+			margin: 21px
+			

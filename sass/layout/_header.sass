@@ -1,0 +1,152 @@
+#header
+	background: #000
+	position: relative
+	z-index: 1001
+.logo
+	color: #fff
+	display: inline-block
+	margin: 14px 0px
+	font-size: 23.4px
+	font-family: $os
+	font-weight: 300
+	+transition(0.5s)
+	&:hover
+		color: #8abbe7
+		+opacity(0.5)
+	+breakpoint($break-767)
+		font-size: 16.85px
+		margin: 5px 0px
+		+breakpoint($break-480)
+			margin: 9px 0px
+	img 
+		vertical-align: middle
+		margin-right: 18px
+		+breakpoint($break-480)
+			margin-right: 13px
+			width: 13%
+.header-menu
+	vertical-align: middle
+	float: right
+	ul 
+		+breakpoint($break-767)
+			display: none
+	li 
+		float: left
+		margin-left: 10px
+		padding: 22px 0px
+		+breakpoint($break-768)
+			margin-left: 11.5px
+			letter-spacing: -0.4px
+		a 
+			color: #fff
+			font-size: 14px
+			+transition(0.5s)
+			&:hover
+				color: #8abbe7
+.input-conteiner
+	float: right
+	width: 480/1255*100%
+	position: relative
+	margin: 15px 35px 15px 0px
+	+breakpoint($break-768)
+		width: 28.54701%
+		margin: 15px 35px 15px 0px
+	+breakpoint($break-767)
+		display: none
+input[type="search"]
+	color: #c3c3c3
+	font-size: 14px
+	width: 100%
+	padding: 7px 10px
+	border: none
+	outline: none
+	+appearance(none)
+	&::-webkit-search-decoration,
+	&::-webkit-search-cancel-button,
+	&::-webkit-search-results-button, 
+	&::-webkit-search-results-decoration
+		display: none
+	&::-ms-clear
+		display: none
+input[type="submit"]
+	+opacity(0)
+	outline: none
+	width: 30px
+	+appearance(none)
+	cursor: pointer
+	height: 100%
+.submit-conteiner
+	background: image-url("search.png") no-repeat center center
+	position: absolute
+	right: 0px
+	top: 0px
+	height: 100%
+.icon-menu
+	cursor: pointer
+	display: none
+	+breakpoint($break-767)
+		display: block
+		color: #fff
+		position: absolute
+		right: 20px
+		top: 0px
+		z-index: 10
+		font-size: 25px
+		padding: 9px 0px
+		height: 24px
+.icon-search
+	display: none
+	cursor: pointer
+	+breakpoint($break-767)
+		display: block
+		color: #fff
+		position: absolute
+		right: 60px
+		top: 0px
+		z-index: 10
+		font-size: 25px
+		padding: 9px 0px
+		height: 24px
+.input-conteiner-mobile
+	width: 100%
+	background: #5484bc
+	max-height: 0
+	+opacity(0)
+	+transition(0.5s)
+	padding: 0
+	.input-conteiner-mobile-item
+		position: relative
+	&.open
+		padding: 20px 0px
+		display: block
+		+opacity(1)
+		max-height: 100px
+.push-menu
+	position: fixed
+	z-index: 100
+	width: 100%
+	z-index: 1000
+	top: 0
+	left: 100%
+	height: 100%
+	overflow: auto
+	+transition(0.5s)
+	background: rgba(#6497cf,0.5)
+.push-menu-open
+	.push-menu
+		left: 0px
+	.icon-menu:before 
+		content: "\68"
+.header-menu-mobile
+	background: #5484bb
+	padding-top: 54px
+	padding-right: 22px
+	width: 160px
+	float: right
+	text-align: right
+	min-height: 100%
+	+box-sizing(border-box)
+	a
+		color: #fff
+		font-size: 14px
+		line-height: 30px
